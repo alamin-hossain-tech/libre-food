@@ -1,5 +1,7 @@
 import { Box, Container, Heading, Text } from "@chakra-ui/react";
 import type { MetaFunction } from "@remix-run/node";
+import AboutUsSection from "~/components/about-us-section/AboutUsSection";
+import CategorySection from "~/components/category-section/CategorySection";
 import HeaderSection from "~/components/heeader/Header";
 import HeroSection from "~/components/hero-section/HeroSection";
 
@@ -17,6 +19,8 @@ export default function Index() {
         <HeaderSection />
       </Container>
       <HeroSection />
+      <AboutUsSection />
+      <CategorySection />
     </Box>
   );
 }

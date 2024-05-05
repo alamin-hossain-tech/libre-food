@@ -45,12 +45,10 @@ const Heading = {
     "heading-2": defineStyle({
       fontSize: "48px",
       lineHeight: "56px",
-      letterSpacing: "52.8px",
     }),
     "heading-3": defineStyle({
       fontSize: "40px",
       lineHeight: "48px",
-      letterSpacing: "44px",
     }),
     "heading-4": defineStyle({
       fontSize: "32px",
@@ -111,6 +109,12 @@ const Text = {
       fontSize: "14px",
       fontWeight: "normal",
       lineHeight: "22px",
+    }),
+    featured: defineStyle({
+      fontFamily: "Miniver",
+      fontSize: "18px",
+      lineHeight: "26px",
+      color: "primary.100",
     }),
   },
 };

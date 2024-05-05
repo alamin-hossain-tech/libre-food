@@ -1,4 +1,4 @@
-import { Box, Container, HStack, Text } from "@chakra-ui/react";
+import { Box, Container, HStack, Image, Text } from "@chakra-ui/react";
 import SearchIcon from "../icons/search-icon";
 import UserIcon from "../icons/user-icon";
 import CartIcon from "../icons/cart-icon";
@@ -8,7 +8,6 @@ const HeaderSection = () => {
     { id: "menu-1", label: "Home" },
     { id: "menu-2", label: "Menu" },
     { id: "menu-3", label: "Blog" },
-    { id: "menu-4", label: "Pages" },
     { id: "menu-5", label: "About" },
     { id: "menu-6", label: "Shop" },
     { id: "menu-7", label: "Contact" },
@@ -23,12 +22,12 @@ const HeaderSection = () => {
   return (
     <HStack justify={"space-between"} h={"80px"}>
       <HStack gap={"98px"}>
-        <Text>Logo</Text>
+        <Image src="/assets/logo/logo.png" w={"90px"} />
         <HStack gap={"32px"}>
           {menuList.map((menuItem) => (
             <Text
               className="text-hover"
-              variant={"body-normal-bold"}
+              variant={"body-normal"}
               position={"relative"}
               cursor={"pointer"}
               key={menuItem.id}

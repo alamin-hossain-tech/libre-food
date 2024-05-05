@@ -8,23 +8,29 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React from "react";
+import FeaturedTitle from "../shared/feature-title/FeaturedTitle";
 
 const HeroSection = () => {
   return (
     <Box
-      minH={"calc(100vh - 80px)"}
-      bgSize={"contain"}
+      bgSize={{ base: "70%", lg: "52%" }}
       mt={"-80px"}
-      bgPos={"right"}
+      bgPos={"top right"}
       bgRepeat={"no-repeat"}
       bgImage={"./assets/hero-section/her-section-bg.svg"}
     >
-      <Container pt={"80px"} maxW={"container.xl"}>
-        <HStack>
-          <Box flex={1} ml={20}>
+      <Container maxW={"container.xl"}>
+        <HStack
+          justify={"space-between"}
+          align={"center"}
+          flexDir={{ base: "column-reverse", lg: "row" }}
+          py={"80px"}
+        >
+          <Box flex={1}>
             <>
-              <Image src="/public/assets/hero-section/hero-left.svg" />
-              <Box position={"relative"}>
+              {/* <Image src="/assets/hero-section/hero-left.svg" /> */}
+              <FeaturedTitle title="Healthy & Testy Food" />
+              <Box position={"relative"} maxW={"570px"}>
                 <Heading variant={"heading-1"}>
                   Enjoy Healthy Life & Testy Food.
                 </Heading>
@@ -32,7 +38,7 @@ const HeroSection = () => {
                   position={"absolute"}
                   bottom={-3}
                   right={90}
-                  src="/public/assets/hero-section/stars.svg"
+                  src="/assets/hero-section/stars.svg"
                 />
               </Box>
               <Text variant={"body-normal"} py={"32px"}>
@@ -47,10 +53,9 @@ const HeroSection = () => {
           </Box>
           <Box flex={1}>
             <Image
-              w={"95%"}
-              my={"auto"}
-              mx={"auto"}
-              src="/public/assets/hero-section/hero-section-right-image.svg"
+              w={{ base: "70%", lg: "95%" }}
+              src="/assets/hero-section/hero-section-right-image.svg"
+              ml={{ base: 0, lg: -20 }}
             />
           </Box>
         </HStack>

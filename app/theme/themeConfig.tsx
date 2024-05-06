@@ -61,6 +61,7 @@ const Heading = {
     "heading-6": defineStyle({
       fontSize: "20px",
       lineHeight: "28px",
+      color: "gray.200",
     }),
   },
 };
@@ -99,6 +100,7 @@ const Text = {
       fontSize: "16px",
       fontWeight: "normal",
       lineHeight: "24px",
+      color: "gray.300",
     }),
     "body-small-bold": defineStyle({
       fontSize: "14px",

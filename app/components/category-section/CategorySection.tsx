@@ -20,6 +20,63 @@ const CategorySection = () => {
   const [isLastSlide, setIsLastSlide] = useState<boolean>(false);
   const [isFirstSlide, setIsFirstSlide] = useState<boolean>(true);
 
+  const categoryList = [
+    {
+      id: "c-1",
+      label: "C1",
+      items: 22,
+      img: "/assets/category-section/category-1.jpg",
+    },
+    {
+      id: "c-2",
+      label: "C2",
+      items: 22,
+      img: "/assets/category-section/category-2.jpg",
+    },
+    {
+      id: "c-3",
+      label: "C3",
+      items: 22,
+      img: "/assets/category-section/category-3.jpg",
+    },
+    {
+      id: "c-4",
+      label: "C4",
+      items: 22,
+      img: "/assets/category-section/category-4.jpg",
+    },
+    {
+      id: "c-5",
+      label: "C5",
+      items: 22,
+      img: "/assets/category-section/category-5.jpg",
+    },
+    {
+      id: "c-6",
+      label: "C6",
+      items: 22,
+      img: "/assets/category-section/category-6.jpg",
+    },
+    {
+      id: "c-7",
+      label: "C7",
+      items: 22,
+      img: "/assets/category-section/category-7.jpg",
+    },
+    {
+      id: "c-8",
+      label: "C8",
+      items: 22,
+      img: "/assets/category-section/category-8.jpg",
+    },
+    {
+      id: "c-9",
+      label: "C9",
+      items: 22,
+      img: "/assets/category-section/category-9.jpg",
+    },
+  ];
+
   return (
     <Container maxW={"container.xl"} textAlign={"center"} py={"60px"}>
       <Box position={"relative"}>
@@ -53,10 +110,23 @@ const CategorySection = () => {
             }
           }}
         >
-          {[...Array(8).keys()].map((_, index) => {
+          {categoryList?.map((category, index) => {
             return (
-              <SwiperSlide key={index}>
-                <Box w={"full"} height={400} bg={"hover"}></Box>
+              <SwiperSlide key={category.id}>
+                <Box w={"full"}>
+                  <Image rounded={"6px"} src={category.img} />
+                  <Heading
+                    variant={"heading-6"}
+                    color={"gray.200"}
+                    pt={"16px"}
+                    pb={"8px"}
+                  >
+                    {category.label}
+                  </Heading>
+                  <Text variant={"body-normal"} color={"gray.300"}>
+                    {category.items + (category.items > 1 ? " items" : " item")}
+                  </Text>
+                </Box>
               </SwiperSlide>
             );
           })}
@@ -69,7 +139,7 @@ const CategorySection = () => {
           right={-12}
           transform={"translateY(-50%)"}
           _hover={{ bgColor: "none" }}
-          bgColor={swiperRef?.isEnd ? "hover" : "primary.100"}
+          bgColor={isLastSlide ? "hover" : "primary.100"}
           icon={<NextIcon />}
           zIndex={999}
           onClick={() => swiperRef?.slideNext()}
@@ -82,7 +152,7 @@ const CategorySection = () => {
           left={-12}
           transform={"translateY(-50%)"}
           _hover={{ bgColor: "none" }}
-          bgColor={swiperRef?.isBeginning ? "hover" : "primary.100"}
+          bgColor={isFirstSlide ? "hover" : "primary.100"}
           icon={<PreviousIcon />}
           zIndex={999}
           onClick={() => swiperRef?.slidePrev()}

@@ -8,7 +8,6 @@ import {
   Image,
   Text,
 } from "@chakra-ui/react";
-import React from "react";
 import FeaturedTitle from "../shared/feature-title/FeaturedTitle";
 
 const HeroSection = () => {

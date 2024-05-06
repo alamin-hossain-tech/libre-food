@@ -4,11 +4,12 @@ import AboutUsSection from "~/components/about-us-section/AboutUsSection";
 import CategorySection from "~/components/category-section/CategorySection";
 import HeaderSection from "~/components/heeader/Header";
 import HeroSection from "~/components/hero-section/HeroSection";
+import WhyWeAreSection from "~/components/why-we-are-section/WhyWeAreSection";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: "Libre Food" },
+    { name: "description", content: "Welcome to Libre Food" },
   ];
 };
 
@@ -21,6 +22,7 @@ export default function Index() {
       <HeroSection />
       <AboutUsSection />
       <CategorySection />
+      <WhyWeAreSection />
     </Box>
   );
 }

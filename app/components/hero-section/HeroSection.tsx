@@ -2,6 +2,7 @@ import {
   Box,
   Button,
   Container,
+  Flex,
   HStack,
   Heading,
   Image,
@@ -13,14 +14,16 @@ import FeaturedTitle from "../shared/feature-title/FeaturedTitle";
 const HeroSection = () => {
   return (
     <Box
-      bgSize={{ base: "70%", lg: "52%" }}
+      bgSize={{ base: "70%", lg: "contain" }}
       mt={"-80px"}
       bgPos={"top right"}
       bgRepeat={"no-repeat"}
       bgImage={"./assets/hero-section/her-section-bg.svg"}
+      minH={"100vh"}
     >
       <Container maxW={"container.xl"}>
-        <HStack
+        <Flex
+          h={"100vh"}
           justify={"space-between"}
           align={"center"}
           flexDir={{ base: "column-reverse", lg: "row" }}
@@ -58,7 +61,7 @@ const HeroSection = () => {
               ml={{ base: 0, lg: -20 }}
             />
           </Box>
-        </HStack>
+        </Flex>
       </Container>
     </Box>
   );

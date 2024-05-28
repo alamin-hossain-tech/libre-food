@@ -93,6 +93,7 @@ const CategorySection = () => {
           top={"-50%"}
           left={"50%"}
           transform={"translateX(-50%)"}
+          zIndex={-1}
         />
       </Box>
       <Box pos={"relative"} pt={"56px"}>

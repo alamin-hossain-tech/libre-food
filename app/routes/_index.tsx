@@ -4,6 +4,8 @@ import AboutUsSection from "~/components/about-us-section/AboutUsSection";
 import CategorySection from "~/components/category-section/CategorySection";
 import HeaderSection from "~/components/heeader/Header";
 import HeroSection from "~/components/hero-section/HeroSection";
+import OurMenuSection from "~/components/our-menu-section/OurMenuSection";
+import TestimonialSection from "~/components/testimonial-section/TestimonialSection";
 import WhyWeAreSection from "~/components/why-we-are-section/WhyWeAreSection";
 
 export const meta: MetaFunction = () => {
@@ -23,6 +25,8 @@ export default function Index() {
       <AboutUsSection />
       <CategorySection />
       <WhyWeAreSection />
+      <OurMenuSection />
+      <TestimonialSection />
     </Box>
   );
 }

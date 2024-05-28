@@ -5,6 +5,7 @@ import {
   GridItem,
   HStack,
   Heading,
+  Image,
   Text,
 } from "@chakra-ui/react";
 import DeliveryIcon from "../icons/delivery-icon";
@@ -38,9 +39,20 @@ const WhyWeAreSection = () => {
   ];
   return (
     <Container maxW={"container.xl"} py={"60px"}>
-      <HStack gap={"125px"}>
-        <Box flex={1}></Box>
-        <Box flex={1}>
+      <HStack gap={"125px"} align={"start"}>
+        <Box w={"full"}>
+          <HStack gap={0} align={"start"}>
+            <Image rounded={"6px"} w={"50%"} src="/assets/why-we-are/1.jpg" />
+            <Image
+              rounded={"6px"}
+              w={"50%"}
+              ml={"-25px"}
+              mt={"60px"}
+              src="/assets/why-we-are/2.jpg"
+            />
+          </HStack>
+        </Box>
+        <Box w={"full"}>
           <FeaturedTitle title="Why Choose us" />
           <Heading variant={"heading-2"}>Why We are the best?</Heading>
           <Text variant={"body-normal"} pt={"32px"} pb={"16px"}>

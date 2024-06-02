@@ -99,7 +99,6 @@ const CategorySection = () => {
       <Box pos={"relative"} pt={"56px"}>
         <Swiper
           onSwiper={setSwiperRef}
-          //   style={{ overflow: "visible" }}
           slidesPerView={4}
           modules={[Navigation]}
           spaceBetween={24}

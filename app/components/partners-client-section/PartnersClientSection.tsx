@@ -1,6 +1,19 @@
-import { Box, Container, Heading, Image, Text } from "@chakra-ui/react";
+import { Box, Button, Container, Heading, Image, Text } from "@chakra-ui/react";
+import { LinksFunction } from "@remix-run/node";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import css from "./PartnersClientSection.css";
+import { ReactNode, useEffect, useRef, useState } from "react";
+import { Swiper as SwiperTypes } from "swiper";
+
+// export const links: LinksFunction = () => {
+//   return [
+//     {
+//       rel: "stylesheet",
+//       href: css,
+//     },
+//   ];
+// };
 
 const PartnersClientSection = () => {
   return (
@@ -45,7 +58,10 @@ const PartnersClientSection = () => {
             slidesPerView={"auto"}
             className="client-slider"
             modules={[Autoplay]}
-            autoplay={{ delay: 0.000000001, disableOnInteraction: false }}
+            autoplay={{
+              delay: 0.1,
+              disableOnInteraction: false,
+            }}
             loop={true}
             spaceBetween={30}
             speed={2000}

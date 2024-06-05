@@ -12,7 +12,6 @@ import {
 import React, { useContext, useEffect } from "react";
 
 import { ClientStyleContext, ServerStyleContext } from "./context";
-import dbConnect from "server/db.server";
 import ThemeConfig from "./theme/themeConfig";
 
 export const links: LinksFunction = () => {

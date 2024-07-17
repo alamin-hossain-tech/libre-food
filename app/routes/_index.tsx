@@ -3,7 +3,7 @@ import type { MetaFunction } from "@remix-run/node";
 import AboutUsSection from "~/components/about-us-section/AboutUsSection";
 import BlogSection from "~/components/blog-section/BlogSection";
 import CategorySection from "~/components/category-section/CategorySection";
-import HeaderSection from "~/components/heeader/Header";
+
 import HeroSection from "~/components/hero-section/HeroSection";
 import OurMenuSection from "~/components/our-menu-section/OurMenuSection";
 import PartnersClientSection from "~/components/partners-client-section/PartnersClientSection";
@@ -21,9 +21,6 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <Box>
-      <Container maxW={"container.xl"}>
-        <HeaderSection />
-      </Container>
       <HeroSection />
       <AboutUsSection />
       <CategorySection />

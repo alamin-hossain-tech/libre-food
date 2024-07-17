@@ -1,5 +1,5 @@
 // root.tsx
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, Container } from "@chakra-ui/react";
 import { withEmotionCache } from "@emotion/react";
 import { LinksFunction } from "@remix-run/node"; // Depends on the runtime you choose
 import {
@@ -13,6 +13,8 @@ import React, { useContext, useEffect } from "react";
 
 import { ClientStyleContext, ServerStyleContext } from "./context";
 import ThemeConfig from "./theme/themeConfig";
+import HeaderSection from "./components/shared/heeader/Header";
+import FooterSection from "./components/shared/Footer/Footer";
 
 export const links: LinksFunction = () => {
   return [
@@ -75,7 +77,11 @@ export default function App() {
   return (
     <Document>
       <ChakraProvider theme={ThemeConfig}>
+        <Container maxW={"container.xl"}>
+          <HeaderSection />
+        </Container>
         <Outlet />
+        <FooterSection />
       </ChakraProvider>
     </Document>
   );

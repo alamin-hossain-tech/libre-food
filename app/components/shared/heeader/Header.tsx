@@ -1,7 +1,7 @@
 import { Box, Container, HStack, Image, Text } from "@chakra-ui/react";
-import SearchIcon from "../icons/search-icon";
-import UserIcon from "../icons/user-icon";
-import CartIcon from "../icons/cart-icon";
+import CartIcon from "~/components/icons/cart-icon";
+import SearchIcon from "~/components/icons/search-icon";
+import UserIcon from "~/components/icons/user-icon";
 
 const HeaderSection = () => {
   const menuList = [
